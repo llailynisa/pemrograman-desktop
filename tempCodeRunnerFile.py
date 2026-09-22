@@ -1,1 +1,0 @@
-window.configure(bg="blue")
