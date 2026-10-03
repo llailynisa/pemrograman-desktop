@@ -658,7 +658,7 @@ class AplikasiBiodata(tk.Tk):
         # Judul Login
         tk.Label(
             self.frame_login,
-            text="HALAMAN LOGIN",
+            text="LOGIN",
             font=("Arial", 16, "bold")
         ).grid(row=0, column=0, columnspan=3, pady=20)
 
@@ -728,7 +728,8 @@ class AplikasiBiodata(tk.Tk):
             justify=tk.LEFT
         )
         info_label.grid(row=5, column=0, columnspan=3, pady=10)
-
+        self._terapkan_warna(self.frame_login, "#eef4ed")
+        
     def _pindah_ke(self, frame_tujuan):
         """Method untuk berpindah antar tampilan"""
         if self.frame_aktif is not None:
