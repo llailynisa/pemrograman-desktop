@@ -121,7 +121,7 @@ class AplikasiBiodata(tk.Tk):
                 return
 
             try:
-                tgl_obj = datetime.datetime.strptime(tgl_lahir, "DD-MM-YYYY")
+                tgl_obj = datetime.datetime.strptime(tgl_lahir, "%d-%m-%Y")
             except ValueError:
                 messagebox.showwarning(
                     "Format Tanggal Salah",
@@ -248,9 +248,9 @@ class AplikasiBiodata(tk.Tk):
             "write", lambda *a: self._reset_color(self.entry_nim))
         self.var_jurusan.trace_add(
             "write", lambda *a: self._reset_color(self.entry_jurusan))
-        self.var_email.trace_add( "write", lambda *a: self._reset_color(self.entry_nama))
-        self.var_telepon.trace_add( "write", lambda *a: self._reset_color(self.entry_nama))
-        self.var_tgl_lahir.trace_add( "write", lambda *a: self._reset_color(self.entry_nama))
+        self.var_email.trace_add( "write", lambda *a: self._reset_color(self.entry_email))
+        self.var_telepon.trace_add( "write", lambda *a: self._reset_color(self.entry_telepon))
+        self.var_tgl_lahir.trace_add( "write", lambda *a: self._reset_color(self.entry_tgl_lahir))
 
         # (Di sini kita akan meletakkan semua kode GUI nantinya)
         # --- Membuat dan Menempatkan Widget ---
@@ -415,7 +415,7 @@ class AplikasiBiodata(tk.Tk):
 
         self.label_tgl_lahir = tk.Label(
             master=self.frame_input,
-            text="Tanggal Lahir (YYYY-MM-DD):",
+            text="Tanggal Lahir (DD-MM-YYYY):",
             font=("Arial", 12),
             bg="#deb887"
         )

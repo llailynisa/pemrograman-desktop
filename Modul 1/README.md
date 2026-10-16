@@ -1,1 +1,0 @@
-# pemrograman-dekstop
